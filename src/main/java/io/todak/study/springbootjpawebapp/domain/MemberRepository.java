@@ -1,4 +1,4 @@
-package io.todak.study.springbootjpawebapp;
+package io.todak.study.springbootjpawebapp.domain;
 
 import org.springframework.stereotype.Repository;
 
