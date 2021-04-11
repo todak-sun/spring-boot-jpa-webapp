@@ -8,9 +8,12 @@ import io.todak.study.springbootjpawebapp.domain.item.Item;
 import io.todak.study.springbootjpawebapp.repository.ItemRepository;
 import io.todak.study.springbootjpawebapp.repository.MemberRepository;
 import io.todak.study.springbootjpawebapp.repository.OrderRepository;
+import io.todak.study.springbootjpawebapp.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -60,8 +63,9 @@ public class OrderService {
     /**
      * 검색
      */
-//    public List<Order> findOrders(OrderSearch orderSearch){
-//        return
-//    }
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAll(orderSearch);
+    }
+
 
 }
